@@ -1,0 +1,45 @@
+
+GET https://localhost:3000/api/fruits HTTP/1.1
+###
+GET https://localhost:3000/api HTTP/1.1
+###
+POST https://localhost:3000/api/fruits HTTP/1.1
+content-type: application/json
+
+{
+    "id": "1",
+    "name": "Pear"
+}
+###
+DELETE https://localhost:3000/api/fruits/612d57739f7c072240b2c061 HTTP/1.1
+###
+
+POST https://localhost:3000/api/users/signup HTTP/1.1
+content-type: application/json
+
+{
+ "username": "test2",
+ "password": "youwillneverguess"
+}
+###
+POST https://localhost:3000/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+ "username": "test2",
+ "password": "youwillneverguess"
+}
+###
+
+POST https://localhost:3000/api/users HTTP/1.1
+content-type: application/json
+Authorization: Bearer
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyIiwidXNlcmlkIjoiNjEy
+ZTA2NTQzZDExY2NmZTUwY2ZlNTg4IiwiaWF0IjoxNjMwNTg3MDA3LCJleHAiOjE2MzA1O
+TA2MDd9.o-5lq9_IKQgxL1MiwtYrbERkHE5tORq6EkxF3wM_lXQ
+
+{
+ "id": "33",
+ "name": "Peach"
+}
+###
