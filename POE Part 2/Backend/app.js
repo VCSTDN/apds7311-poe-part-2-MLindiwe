@@ -32,6 +32,18 @@ const options = {
      next();
     });
     
+    //writing to a database
+app.post('./tasks', isAuthenticated, async(req, res) =>{
+    const newTaskData = req.body
+    try{
+        const newTask = await Task.create(newTaskData)
+        res.status(201).json(newTask)
+    }
+    catch(error){
+        res.status(500).json({error: ' an error has occured' })
+    }
+})
+    
 //
 app.get(urlprefix+'/', (req, res) => {
     res.send('Hello World')
